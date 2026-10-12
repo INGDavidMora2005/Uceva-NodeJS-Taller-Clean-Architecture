@@ -71,4 +71,39 @@
  *           type: number
  *           example: 4500
  */
+/**
+ * @openapi
+ * components:
+ *   schemas:
+ *     Course:
+ *       type: object
+ *       description: Representa un curso del sistema
+ *       required:
+ *         - id
+ *         - name
+ *         - credits
+ *         - teacher
+ *         - faculty
+ *       properties:
+ *         id:
+ *           type: number
+ *           example: 1
+ *         name:
+ *           type: string
+ *           example: Bases de Datos
+ *         credits:
+ *           type: number
+ *           example: 3
+ *         teacher:
+ *           type: string
+ *           example: Carlos Gómez
+ *         faculty:
+ *           type: string
+ *           enum:
+ *             - Ingenieria
+ *             - Ciencias
+ *             - Administracion
+ *             - Derecho
+ *           example: Ingenieria
+ * */
 export {};
