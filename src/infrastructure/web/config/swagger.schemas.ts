@@ -106,4 +106,41 @@
  *             - Derecho
  *           example: Ingenieria
  * */
+
+/**
+ * @openapi
+ * components:
+ *   schemas:
+ *     Order:
+ *       type: object
+ *       description: Representa un pedido del sistema
+ *       required:
+ *         - id
+ *         - customer
+ *         - total
+ *         - createdAt
+ *         - status
+ *       properties:
+ *         id:
+ *           type: number
+ *           example: 1
+ *         customer:
+ *           type: string
+ *           example: Carlos Ramírez
+ *         total:
+ *           type: number
+ *           example: 125000
+ *         createdAt:
+ *           type: string
+ *           format: date-time
+ *           example: "2026-10-01T15:30:00Z"
+ *         status:
+ *           type: string
+ *           enum:
+ *             - Pendiente
+ *             - Enviado
+ *             - Entregado
+ *             - Cancelado
+ *           example: Pendiente
+ */
 export {};
