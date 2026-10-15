@@ -1,103 +1,12 @@
-# Clean Architecture en NodeJS
+**Campos reales por modelo:**
 
-```
-src
-├── domain
-│   ├── models
-│   │   ├── user.entity.ts
-│   │   └── product.entity.ts
-│   └── repositories
-│       ├── user.repository.ts
-│       └── product.repository.ts
-│
-├── application
-│   └── use-cases
-│       ├── get-all-users.usecase.ts
-│       └── get-all-products.usecase.ts
-│
-├── infrastructure
-│   ├── controllers
-│   │   ├── user.controller.ts
-│   │   └── product.controller.ts
-│   ├── repositories
-│   │   ├── user.repository.impl.ts
-│   │   └── product.repository.impl.ts
-│   ├── datasources
-│   │   ├── user.datasource.ts
-│   │   └── product.datasource.ts
-│   └── web
-│       ├── config/
-│       ├── errors/
-│       ├── interfaces/
-│       ├── controllers/
-│       ├── routes/
-│       └── server.ts
-│
-└── app.ts
-```
+- **User** (`src/domain/models/user.model.ts`): `id: number`, `name: string`, `lastName: string`, `age: number`, `email: string`, `engineering: 'Sistemas' | 'Electronica' | 'Biomedica' | 'Industrial' | 'Ambiental'`
+- **Product** (`src/domain/models/product.model.ts`): `id: number`, `name: string`, `category: 'Lacteos' | 'Carnes' | 'Frutas' | 'Verduras'`, `price: number`
+- **Course** (`src/domain/models/course.model.ts`): `id: number`, `name: string`, `credits: number`, `teacher: string`, `faculty: 'Ingenieria' | 'Ciencias' | 'Administracion' | 'Derecho'`
+- **Order** (`src/domain/models/order.model.ts`): `id: number`, `customer: string`, `total: number`, `createdAt: string` (ISO 8601), `status: 'Pendiente' | 'Enviado' | 'Entregado' | 'Cancelado'`
 
-## Paso 1 - Crear Modelos
+## Integrantes
 
-```
-src//domain/models/
-├── user.model.ts
-└── product.model.ts
-```
-
-## Paso 2 - Crear Repositorios
-
-```
-src/domain/repositories/
-├── user.repository.ts
-└── product.repository.ts
-```
-
-## Paso 3 - Crear Casos de Uso
-
-```
-src/application/usecases/
-├── get-all-users.usecase.ts
-└── get-all-products.usecase.ts
-```
-
-## Paso 4 - Crear Datasources
-
-```
-src/infrastructure/datasource/
-├── user.datasource.ts
-└── product.datasource.ts
-```
-
-## Paso 5 - Crear Repositorios Implementadores
-
-```
-src/infrastructure/repositories/
-├── user.repository.impl.ts
-└── product.repository.impl.ts
-```
-
-## Paso 6 - Implementar Web (Express – Framework Externo)
-
-```
-src/infrastructure/web/
-├── config/
-├── errors/
-├── interfaces/
-├── controllers/
-├── routes/
-└── server.ts
-```
-
-# Funcionamiento del Backend
-
-## Ejecutar Backend
-```
-npm run start
-```
-
-## Urls Consumo
-```
-http://localhost:3000/api/docs
-http://localhost:3000/api/users/{countUsers}
-http://localhost:3000/api/products/{countProducts}
-```
+- David Mora Duque – **courses**, **orders**
+- Juan Diego Rodriguez – **courses**, **orders**
+- Juan Pablo Devia – **books** (según enunciado del taller). Módulos presentes en este repositorio: **users**, **products**, **courses**, **orders**.
