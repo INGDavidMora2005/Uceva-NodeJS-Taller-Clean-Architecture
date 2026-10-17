@@ -143,4 +143,40 @@
  *             - Cancelado
  *           example: Pendiente
  */
+
+/**
+ * @openapi
+ * components:
+ *   schemas:
+ *     Book:
+ *       type: object
+ *       description: Representa un libro del sistema
+ *       required:
+ *         - id
+ *         - title
+ *         - author
+ *         - year
+ *         - genre
+ *       properties:
+ *         id:
+ *           type: integer
+ *           example: 1
+ *         title:
+ *           type: string
+ *           example: Cien años de soledad
+ *         author:
+ *           type: string
+ *           example: Gabriel García Márquez
+ *         year:
+ *           type: integer
+ *           example: 1967
+ *         genre:
+ *           type: string
+ *           enum:
+ *             - Novela
+ *             - Ciencia
+ *             - Historia
+ *             - Tecnologia
+ *           example: Novela
+ */
 export {};
